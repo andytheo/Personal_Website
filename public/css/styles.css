@@ -1,0 +1,281 @@
+body {
+  width: 100%;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  margin: -15px 0;
+}
+
+.list {
+  font-size: 1.2rem;
+  padding-right: 20px;
+}
+.list:hover {
+  color: #055052;
+}
+.intro {
+  background-color: #F4EEE8;
+  height: 90vh;
+}
+
+.intro-image {
+  width: 60%;
+  margin: 0 10%;
+}
+
+.left {
+  margin: 70px auto 0;
+  color: #055052;
+  padding: 0 30px;
+}
+
+.intro-name {
+  font-weight: bolder;
+  font-family: 'Merienda', cursive;
+}
+
+.intro-text {
+  position: relative;
+  width: 9.2em;
+  margin: 0;
+  border-right: 2px solid black;
+  font-size: 180%;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: rotateY(-50%);
+}
+.type {
+  animation: typewriter 4s steps(40) 1s 1 normal both,
+  blinkTextCursor 500ms steps(40) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9.3em;
+  }
+}
+@keyframes blinkTextCursor {
+  from{
+    border-right-color: #055052;
+    }
+  to {
+    border-right-color: transparent;
+    }
+}
+
+
+.scrolldown {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+.scrolldown span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 70%;
+  height: 70%;
+  border-bottom: 2px solid #055052;
+  border-right: 2px solid black;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+}
+.scrolldown span:nth-child(1) {
+  transform: translate(-15px, -15px);
+  animation-delay: -0.3s;
+}
+.scrolldown span:nth-child(2) {
+  transform: translate(0, 0);
+  animation-delay: -0.2s;
+}
+.scrolldown span:nth-child(3) {
+  transform: translate(15px, 15px);
+  animation-delay: 0s;
+}
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  50%,100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+}
+
+.profile {
+  margin-top: 10px;
+}
+.profile-head {
+  text-align: center;
+  color: #055052;
+}
+
+.profile-left {
+  text-align: center;
+  padding-top: 80px;
+}
+.profile-image {
+  text-align: center;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 4px lightgrey;
+}
+
+.profile-right {
+  padding-top: 80px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #055052;
+  text-align: center;
+}
+
+.profile-text {
+  font-size: 1.5rem;
+}
+
+.profile-btn {
+  margin: 40px 0;
+}
+
+.projects {
+  margin-top: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #055052;
+}
+.project-class {
+  margin-bottom: 20px;
+
+}
+
+.project-description {
+  margin: 20px;
+}
+
+.project-btn {
+  margin: 0 20px;
+}
+.section-header {
+  text-align: center;
+  color: #055052;
+  padding-bottom: 30px;
+}
+.project-img {
+  margin: 20px;
+  width: 40vw;
+  box-shadow: 1px 1px 5px grey;
+  /* height: 100%; */
+}
+
+.blog {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.centered-btn {
+  margin: 40px 0;
+}
+
+.icons {
+  text-align: center;
+  margin: 10px auto;
+}
+.icon-list {
+  padding: 5px 20px;
+  color: #055052;
+}
+.icon-list:hover {
+  opacity: .8;
+}
+
+
+@media (min-width: 768px) {
+  .left {
+    padding-top: 10px;
+  }
+  .intro-image {
+    width: 100%;
+    margin: 0 50px;
+  }
+  .intro-greeting {
+    font-size: 3em;
+  }
+
+  .intro-name {
+    font-weight: bolder;
+    font-size: 3.3rem;
+  }
+  .profile-right {
+    padding-top: 120px;
+  }
+}
+
+.footer {
+  color: white;
+  padding: 10px 40px;
+  font-size: 1rem;
+  background-color: #F4EEE8;
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .intro-image {
+    width: 50%;
+    margin: 0 100px;
+  }
+  .right {
+  display: none;
+  }
+  .left {
+    margin: 40% auto 0;
+    color: #055052;
+    padding: 0 13%;
+  }
+  .intro {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-img {
+  margin: 20px 0 0 30px;
+  width: 40vw;
+  box-shadow: 1px 1px 5px grey;
+  /* height: 100%; */
+}
+}
+
+@media (min-width: 1116px) {
+  .project-img {
+    margin: 20px 0 0 50px;
+    width: 30vw;
+    box-shadow: 1px 1px 5px grey;
+    /* height: 100%; */
+  }
+}
+
+/*
+font-family: 'Courgette', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Ubuntu', sans-serif; */

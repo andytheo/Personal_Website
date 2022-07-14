@@ -1,0 +1,84 @@
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)) , url("../images/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 93vh;
+  color: white;
+}
+
+.contact-header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.need-a-site {
+  font-family: 'Lobster Two', cursive;
+  font-weight: lighter;
+  font-size: 1.6rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.contact-icon {
+  display: block;
+  border-radius: 50%;
+  padding-top: 30px;
+  margin: 0;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: grey;
+}
+
+.form-class {
+  margin: 50px 0 0;
+  border: 1px solid white;
+  width: 380px;
+  border-radius: 10px;
+}
+
+.contact-form {
+  display: block;
+  margin: 20px;
+  width: 320px;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+}
+
+.contact-button {
+  display: block;
+  margin: 20px;
+  width: 320px;
+  color: black;
+  background-color: white;
+}
+
+@media (max-width: 500px) {
+  .contact-icons {
+    margin-top: 70px;
+  }
+  .contact-icon {
+    font-size: 20px;
+    border-radius: 50%;
+    padding-top: 20px;
+  }
+  .form-class {
+    margin: 50px 0 0;
+    border: 1px solid white;
+    width: 200px;
+    border-radius: 10px;
+  }
+  .contact-form {
+    display: block;
+    margin: 20px;
+    width: 150px;
+  }
+  .contact-button {
+    display: block;
+    margin: 20px;
+    width: 150px;
+  }
+}

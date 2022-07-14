@@ -1,0 +1,68 @@
+.learn-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/learn.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+
+.switch-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/switch.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+
+.blogpost-title {
+  text-align: center;
+  color: #fff;
+  padding: 20vh 0;
+  font-size: 2.5em;
+}
+
+.blog-main {
+  margin: 20px 50px;
+  text-align: justify;
+}
+
+.author {
+  margin: 0 50px;
+}
+
+.quote {
+  text-align: center;
+}
+
+.author-image {
+  margin: 20px 0 0;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.blog-read {
+  margin: 30px 10px 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 11px;
+}
+
+.read-time {
+  margin: -15px 0 0;
+}
+
+@media (min-width: 768px) {
+  .learn-img {
+    height: 70vh;
+  }
+  .switch-img {
+    height: 70vh;
+  }
+  .blogpost-title {
+    font-size: 3.5em;
+  }
+  .blog-main {
+    margin: 20px 200px;
+    text-align: justify;
+  }
+  .author {
+    margin: 0 250px;
+  }
+}
