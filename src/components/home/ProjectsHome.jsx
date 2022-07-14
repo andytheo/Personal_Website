@@ -11,8 +11,8 @@ function ProjectsHome() {
       <div className="container">
         <ProjectHome
           img="../../../images/tnsda-home.png"
-          name="TNSDA"
-          desc="Website built using React.js and Java spring boot backend."
+          name="Toronto Nigerian Seventh-Day Adventist Church"
+          desc="A website for a church organization built using React.js and Java spring boot backend."
           btn1="View project"
           project="https://www.torontonigeriansda.org"
         />
