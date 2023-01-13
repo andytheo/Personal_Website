@@ -7,7 +7,7 @@ import Blog from "./components/blog/Blogposts";
 import Switching from "./components/blog/SwitchingCareer";
 import Learn from "./components/blog/Learn";
 import Contact from "./components/contact/ContactClone";
-import { NavLink, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 function Main() {
   return (

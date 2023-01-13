@@ -1,6 +1,5 @@
 import axios from "axios"
 import React, { useState } from "react"
-// import "./App.css"
 
 function Contact() {
 	const [ sent, setSent ] = useState(false)
