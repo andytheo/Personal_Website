@@ -28,6 +28,9 @@ function Main() {
 }
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <div>
       <Main />
