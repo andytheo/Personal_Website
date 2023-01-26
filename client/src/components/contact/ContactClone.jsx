@@ -3,6 +3,9 @@ import Nav from "../home/Nav";
 import { sendEmail } from "../ServerComponents/sendEmail";
 import { validateEmail, validateFullName, validateMessage } from "../ServerComponents/Validation";
 import Loading from "../ServerComponents/Loading";
+import { toast } from "react-toastify";
+import Toast from "../ServerComponents/EmailStatus";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   // Initialize fields
@@ -25,7 +28,18 @@ function Contact() {
     validateEmail({ email, setEmailError });
     validateMessage({ message, setMessageError });
 
+    // Send a notification and clear input forms
     if (send) {
+      toast.success("Message sent", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       setFullName("");
       setEmail("");
       setMessage("");
@@ -35,24 +49,34 @@ function Contact() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setButtonLoading(true);
     if (!fullNameError & !emailError & !messageError) {
       sendEmail({ fullName, email, message, setSend }).then(() => {
-        console.log(process.env.USER + " " + process.env.PASSWORD + " " + process.env.RECIPIENT);
-        console.log("Sent");
-        setLoading(false);
         setButtonLoading(false);
+      });
+    } else if (fullName == null || undefined) {
+      toast.error("Message not sent!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
       });
     }
   };
 
   return (
-    <div>
+    <>
       <Nav />
+      <Toast />
       {loading ? (
         <Loading />
       ) : (
         <div className="contact">
+          {/* <Toast /> */}
           <h1 className="contact-header">Contact</h1>
           <h3 className="need-a-site">Need a website or looking to hire?</h3>
           <div className="container-fluid">
@@ -79,10 +103,11 @@ function Contact() {
                     <input
                       className="mb-3 contact-form"
                       type="text"
-                      // name="fullName"
+                      id="validationCustom01"
                       placeholder="Enter name"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
+                      required
                     />
                     {<div className="text-danger ml-4">{fullNameError}</div>}
                   </div>
@@ -94,6 +119,7 @@ function Contact() {
                       placeholder="Enter email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
                     {<div className="text-danger ml-4">{emailError}</div>}
                   </div>
@@ -107,6 +133,7 @@ function Contact() {
                       placeholder="Enter message"
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
+                      required
                     ></textarea>
                     {<div className="text-danger ml-4">{messageError}</div>}
                   </div>
@@ -120,7 +147,7 @@ function Contact() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
