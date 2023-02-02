@@ -5,7 +5,7 @@ const Email = (options) => {
     // service: "gmail",
     // host: "smtp.gmail.com",
     port: 465,
-    // secure: true,
+    secure: true,
     service: "Gmail",
     auth: {
       user: process.env.USER,
