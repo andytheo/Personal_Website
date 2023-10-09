@@ -50,9 +50,11 @@ function Contact() {
   const submitHandler = (e) => {
     e.preventDefault();
     setButtonLoading(true);
+    // setLoading(true);
     if (!fullNameError & !emailError & !messageError) {
       sendEmail({ fullName, email, message, setSend }).then(() => {
         setButtonLoading(false);
+        console.log("Sent");
       });
     } else if (fullName == null || undefined) {
       toast.error("Message not sent!", {

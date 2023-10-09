@@ -1,16 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Icons from '../home/Icons'
+import React from "react";
+import ReactDOM from "react-dom";
+import Icons from "../home/Icons";
 
 function Footer() {
-  return(
-    <div>
+  return (
     <div className="footer">
-    <Icons />
+      <Icons />
     </div>
-
-    </div>
-  )
+  );
 }
 
 export default Footer;

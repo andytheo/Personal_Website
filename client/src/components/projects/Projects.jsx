@@ -28,14 +28,14 @@ function Projects() {
           project="https://pecutyroyalacademy.com/"
         />
 
-        <ProjectHome
+        {/* <ProjectHome
           img="../../../images/portfolio.png"
           name="Portfolio"
           desc="Get to know me through my portfolio which I built with React.js."
           btn1="View project"
           project="/"
           btn2="View code"
-        />
+        /> */}
       </div>
     </>
   );
